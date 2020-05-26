@@ -2578,3 +2578,16 @@ INSERT INTO `ums_role_resource_relation` VALUES ('174', '1', '5');
 INSERT INTO `ums_role_resource_relation` VALUES ('175', '1', '6');
 INSERT INTO `ums_role_resource_relation` VALUES ('176', '1', '23');
 INSERT INTO `ums_role_resource_relation` VALUES ('177', '1', '24');
+
+-- ----------------------------
+-- Table structure for ums_supplier
+-- ----------------------------
+DROP TABLE IF EXISTS `ums_supplier`;
+CREATE TABLE `ums_supplier` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `supplier_name` varchar(64) DEFAULT NULL COMMENT '供应商名称',
+  `status` int(1) DEFAULT NULL COMMENT '状态  0-停用  1-启用',
+  `contract_man` varchar(8) DEFAULT NULL COMMENT '联系人',
+  `contract_phone` varchar(13) DEFAULT NULL COMMENT '联系电话',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='供应商表';
